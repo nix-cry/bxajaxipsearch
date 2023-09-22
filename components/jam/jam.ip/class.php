@@ -20,10 +20,6 @@ use Bitrix\Main\Entity;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 class JamCatalogList extends \CBitrixComponent
 {
-    protected function _getGet()
-    {
-
-    }
     protected function _getPost($strIp)
     {
         $pattern = '/^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$/';
@@ -90,7 +86,6 @@ class JamCatalogList extends \CBitrixComponent
     public function executeComponent()
     {
 
-        
         // $data = FALSE;
         // $cache_id = "cache_jam_".$_GET["id"];
         // $cach_path = "cache_jam_".$_GET["id"];
@@ -110,9 +105,7 @@ class JamCatalogList extends \CBitrixComponent
         //         $obCache->EndDataCache(array('data' => $data));
         //     }
         // }
-
         $this->arResult = $data;
-     
         $this->IncludeComponentTemplate();
     }
 
